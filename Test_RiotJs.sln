@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_RiotJs", "Test_RiotJs\Test_RiotJs.csproj", "{B6AC255F-4E27-4FED-9D11-319430C73162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{3DC4D7AE-DCEF-4088-9794-A934838F710F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6AC255F-4E27-4FED-9D11-319430C73162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AC255F-4E27-4FED-9D11-319430C73162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AC255F-4E27-4FED-9D11-319430C73162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AC255F-4E27-4FED-9D11-319430C73162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC4D7AE-DCEF-4088-9794-A934838F710F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC4D7AE-DCEF-4088-9794-A934838F710F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC4D7AE-DCEF-4088-9794-A934838F710F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC4D7AE-DCEF-4088-9794-A934838F710F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
