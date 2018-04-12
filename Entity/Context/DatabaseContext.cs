@@ -16,6 +16,7 @@ namespace Entity
         {
         }
         public virtual DbSet<Alumno> Alumno { get; set; }
+        public virtual DbSet<Curso> Curso { get; set; }
 
 
     }
