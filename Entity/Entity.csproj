@@ -68,12 +68,12 @@
     <Compile Include="Context\DatabaseContext.cs" />
     <Compile Include="Entiities\AlumnoViewModel.cs" />
     <Compile Include="Entiities\CursoViewModel.cs" />
+    <Compile Include="Method\BindingGrid.cs" />
+    <Compile Include="Method\CursoMethod.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Method\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>

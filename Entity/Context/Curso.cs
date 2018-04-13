@@ -13,12 +13,13 @@ namespace Entity
     {
         public Curso()
         {
-            Alumno = new List<Alumno>();
+            //Alumno = new List<Alumno>();
         }
         [Key]
         public Guid CurIntId { get; set; }
+        [Display (Name ="Cursos")]
         public string CursoName { get; set; }
 
-        public ICollection<Alumno> Alumno { get; set; }
+        //public ICollection<Alumno> Alumno { get; set; }
     }
 }
