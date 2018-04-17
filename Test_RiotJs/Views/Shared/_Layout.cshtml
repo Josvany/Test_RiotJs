@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
@@ -24,7 +24,7 @@
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("RiotJs","Index","RiotJs")</li>
+                    <li>@Html.ActionLink("RiotJs","Index","Curso")</li>
                 </ul>
             </div>
         </div>
@@ -39,7 +39,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-
+    <script src="~/Scripts/Grid_Pagination.js"></script>
     <script src="~/Scripts/riot.js"></script>
     <script src="~/Scripts/riot-compiler.js"></script>
     @RenderSection("scripts", required: false)

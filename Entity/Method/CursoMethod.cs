@@ -8,12 +8,31 @@ namespace Entity
 {
     public class CursoMethod : CursoViewModel
     {
-        public List<Curso> Listar()
+        public BindingGridResponse Listar(BindingGrid binGrid)
         {
-            using (var cn = new DatabaseContext())
+            try
             {
-                return cn.Curso.ToList();
+                using (var cn = new DatabaseContext())
+                {
+                    //return cn.Curso.ToList();
+                    binGrid.Inicializar();
+
+                    var query = cn.Curso.ToList();
+
+
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return binGrid.Responde();
+        }
+
+        public void Create(List<Curso> model)
+        {
+
         }
     }
 }

@@ -14,7 +14,7 @@ function Grid_Pagi(a)
 			 	 a.attr = t,
 			 	  '<button type="' + a.type + '" style="' + a.style + '" class="btn ' + a["class"] + '" value="' + a.value + '" ' + a.attr + ">" + a.contenido + "</button>" }
 
-			 	   function Grid_link(a)
+function Grid_link(a)
 			 	   { 
 			 	   		a = 
 			 	   		{ 
@@ -28,7 +28,7 @@ function Grid_Pagi(a)
 				 	   	return $.each(a.attr, function (a, n) { t += n }), a.attr = t, '<a href="' + a.href + '" target="' + a.target + '" class="' + a["class"] + '" ' + a.attr + ">" + a.contenido + "</a>"
 			 	   	} 
 
-			 	   function Grid_dropdown(a) 
+function Grid_dropdown(a) 
 			 	   { 
 			 	   		a = 
 			 	   		{ 
@@ -52,7 +52,7 @@ function Grid_Pagi(a)
 			 		   return $.each(a.data, function (a, t) { o += '<li><a href="' + t.href + '">' + t.contenido + "</a></li>" }), o += "</ul>", '<div class="dropdown">' + n + o + "</div>" 
 			 		} 
 
-			 	   function Grid_input(a) 
+function Grid_input(a) 
 			 	   { 
 			 	   		a = 
 			 	   			{ 
@@ -73,7 +73,7 @@ function Grid_Pagi(a)
 				 	   			'<input type="' + a.type + '" style="' + a.style + '" class="form-control input-sm ' + a["class"] + '" value="' + a.value + '" ' + a.attr + " />" 
 					}
 
-			 	   function Grid_imagen(a) 
+function Grid_imagen(a) 
 			 	   { 
 			 	   		a = 
 			 	   			{ 
@@ -93,7 +93,7 @@ function Grid_Pagi(a)
 			 	   						'<img src="' + a.src + '" class="' + a["class"] + '" style="' + a.style + '" ' + a.attr + "/>" 
 			 	   	} 
 
-			 	   function Grid_select(a) 
+function Grid_select(a) 
 			 	   { 
 			 	   		a = 
 			 	   			{ 
@@ -118,7 +118,7 @@ function Grid_Pagi(a)
 			 	   				}), n 
 			 	   	} 
 
-			 	   	$.fn.Grid = function (a) { "use strict"; function t() 
+$.fn.Grid = function (a) { "use strict"; function t() 
 			 	   	 { 
 			 	   	 	var a = P.tabla.find("." + x.columnas); a.html("<tr></tr>"), P.filtrable && a.append('<tr class="' + x.filtro + '"></tr>'), 
 			 	   	 	$(P.columnas).each(function (a, t) { var n = _(r(t.style, "")), o = $('<th class="' + r(t["class"], "") + '" style="' + n + '"></th>'); if (P.columnas_ancho.push(o.css("width")), t.leyenda = r(t.leyenda, ""), void 0 !== t.formato ? o.html(t.formato()) : o.text(t.leyenda), t.ordenable) { var i = $('<a href="#" class="' + x.columna_ordenar + '" data-columna="' + r(t.columna, "") + '"></a>'); i.html(o.html()), o.html(i) } if (P.tabla.find("thead tr:first").append(o), P.filtrable) { if (o = $("<th></th>"), void 0 !== t.filtro) if ("function" == typeof t.filtro) { var e = $(t.filtro()); if (e.attr("data-columna", t.columna).removeClass("input-sm input-lg").addClass("input-sm").addClass(x.filtro_control), $(e).is("input")) { var l = $('<div class="input-group"><div class="' + x.filtro_control_container + '"></div><span class="input-group-btn"><button class="btn btn-default btn-sm ' + x.filtro_limpiar + '" type="button">Go!</button></span>'), s = '<i class="glyphicon glyphicon-remove"></i>'; l.find("." + x.filtro_control_container).html(e), l.find("." + x.filtro_limpiar).html(s), o.html(l) } $(e).is("select") && o.html(e) } else if (t.filtro) { var e = $(Grid_input({})); e.attr("data-columna", t.columna).removeClass("input-sm input-lg").addClass("input-sm").addClass(x.filtro_control); var l = $('<div class="input-group"><div class="' + x.filtro_control_container + '"></div><span class="input-group-btn"><button title="' + y.filtro_limpiar + '" class="btn btn-default btn-sm ' + x.filtro_limpiar + '" type="button">Go!</button></span>'), s = '<i class="glyphicon glyphicon-remove"></i>'; l.find("." + x.filtro_control_container).html(e), l.find("." + x.filtro_limpiar).html(s), o.html(l) } P.tabla.find("thead tr." + x.filtro).append(o) } }) 
@@ -296,7 +296,7 @@ function Grid_Pagi(a)
 				 	   			sin_registros: r(a.texto.encontrados, "Sin registros que mostrar"), 
 				 	   			cargando: r(a.texto.cargando, ".. cargando ..") 
 			 	   			}, 
-			 	   		b = "ResponseGrid-" + this.attr("id").replace("#", ""),
+                              b = "ResponseGrid-" + this.attr("CurIntId").replace("#", ""),
 			 	   		x = { 
 			 	   				columnas: b + "-columnas", filas: b + "-filas", 
 			 	   				filtro: b + "-filtro", filtro_control_container: b + "-filtro-control-container", 

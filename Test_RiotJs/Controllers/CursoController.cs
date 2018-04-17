@@ -15,5 +15,10 @@ namespace Test_RiotJs.Controllers
         {
             return View(objCurso.Listar());
         }
+
+        public JsonResult Listar(CursoMethod curso)
+        {
+
+        }
     }
 }
