@@ -13,12 +13,12 @@ namespace Test_RiotJs.Controllers
         // GET: Curso
         public ActionResult Index()
         {
-            return View(objCurso.Listar());
+            return View();
         }
 
-        public JsonResult Listar(CursoMethod curso)
+        public JsonResult Listar(BindingGrid curso)
         {
-
+            return Json(objCurso.Listar(curso), JsonRequestBehavior.AllowGet);
         }
     }
 }
