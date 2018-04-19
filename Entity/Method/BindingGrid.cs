@@ -13,58 +13,58 @@ namespace Entity
         public int Limite { get; set; }
         public int Pagina { get; set; }
 
-        public IList<BindingGridFiltro> Filtros { get; set; }
-        public IList<BindingGridParametro> Parametros { get; set; }
+        public IList<BindingGRIDFiltro> Filtros { get; set; }
+        public IList<BindingGRIDParametro> Parametros { get; set; }
 
-        private BindingGridResponse Response = new BindingGridResponse();
+        private BindingGRIDResponde BindingResponde = new BindingGRIDResponde();
 
         public void Inicializar()
         {
             /* Cantidad de registros por página */
             Pagina = Pagina - 1;
 
-            /* Desde que número de fila va a paginar */
+            /* Desde que número de fila va a Paginar */
             if (Pagina > 0) Pagina = Pagina * Limite;
 
             /* Filtros */
             if (Filtros == null)
-                Filtros = new List<BindingGridFiltro>();
+                Filtros = new List<BindingGRIDFiltro>();
 
             /* Parametros adicionales */
             if (Parametros == null)
-                Parametros = new List<BindingGridParametro>();
+                Parametros = new List<BindingGRIDParametro>();
         }
 
         public void SetData(dynamic data, int total)
         {
-            Response = new BindingGridResponse
+            BindingResponde = new BindingGRIDResponde
             {
-                Data = data,
-                Total = total
+                data = data,
+                total = total
             };
         }
 
-        public BindingGridResponse Responde()
+        public BindingGRIDResponde Responde()
         {
-            return Response;
+            return BindingResponde;
         }
     }
 
-    public class BindingGridResponse
+    public class BindingGRIDResponde
     {
-        public int Total { get; set; }
-        public dynamic Data { get; set; }
+        public int total { get; set; }
+        public dynamic data { get; set; }
     }
 
-    public class BindingGridFiltro
+    public class BindingGRIDFiltro
     {
-        public string Columna { get; set; }
-        public string Valor { get; set; }
+        public string columna { get; set; }
+        public string valor { get; set; }
     }
 
-    public class BindingGridParametro
+    public class BindingGRIDParametro
     {
-        public string Clave { get; set; }
-        public string Calor { get; set; }
+        public string clave { get; set; }
+        public string valor { get; set; }
     }
 }

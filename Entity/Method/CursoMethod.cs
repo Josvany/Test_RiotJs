@@ -8,7 +8,7 @@ namespace Entity
 {
     public class CursoMethod : CursoViewModel
     {
-        public BindingGridResponse Listar(BindingGrid binGrid)
+        public BindingGRIDResponde Listar(BindingGrid binGrid)
         {
             try
             {
@@ -31,8 +31,8 @@ namespace Entity
                     // Filtrar
                     foreach (var f in binGrid.Filtros)
                     {
-                        if (f.Columna == "CursoName")
-                            query = query.Where(x => x.CursoName.StartsWith(f.Valor));
+                        if (f.columna == "CursoName")
+                            query = query.Where(x => x.CursoName.StartsWith(f.valor));
                     }
 
                     var cursos = query.Skip(binGrid.Pagina)
